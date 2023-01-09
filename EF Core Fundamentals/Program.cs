@@ -1,4 +1,6 @@
-﻿var _context = new ApplicationDbContext();
+﻿using EFCoreFundamentals.Contexts;
+
+var _context = new ApplicationDbContext();
 
 //var employee = new Employee
 //{
