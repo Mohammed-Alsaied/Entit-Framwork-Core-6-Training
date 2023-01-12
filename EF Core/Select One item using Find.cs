@@ -13,6 +13,5 @@ namespace EF_Core
             Console.WriteLine($"Id: {stock.Id}: {stock.Name}");
             #endregion
         }
-
     }
 }
