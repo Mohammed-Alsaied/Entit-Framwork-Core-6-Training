@@ -1,17 +1,15 @@
-﻿using EF_Core.DbContexts;
-
-namespace EF_Core
+﻿namespace EF_Core
 {
-    public class Program
-    {
-        static void Main(string[] args)
-        {
-            #region Select One item using Find
-            var _context = new ApplicationDbContext();
+    //public class Program
+    //{
+    //    static void Main(string[] args)
+    //    {
+    //        #region Select One item using Find
+    //        var _context = new ApplicationDbContext();
 
-            var stock = _context.Stocks.Find(1);
-            Console.WriteLine($"Id: {stock.Id}: {stock.Name}");
-            #endregion
-        }
-    }
+    //        var stock = _context.Stocks.Find(1);
+    //        Console.WriteLine($"Id: {stock.Id}: {stock.Name}");
+    //        #endregion
+    //    }
+    //}
 }

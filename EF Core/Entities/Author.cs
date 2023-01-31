@@ -5,7 +5,7 @@
         public int Id { get; set; }
         public string Name { get; set; } = null!;
         public int NationalityId { get; set; }
-        public Nationalities Nationalities { get; set; }
+        public Nationality Nationality { get; set; }
 
     }
 }
