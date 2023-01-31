@@ -27,7 +27,9 @@ namespace EF_Core.DbContexts
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseLazyLoadingProxies().UseSqlServer("Data Source=(localdb)\\ProjectModels;Initial Catalog=EFCore");
+                //optionsBuilder.UseLazyLoadingProxies().UseSqlServer("Data Source=(localdb)\\ProjectModels;Initial Catalog=EFCore");
+                optionsBuilder.UseSqlServer("Data Source=(localdb)\\ProjectModels;Initial Catalog=EFCore",
+                    o => o.UseQuerySplittingBehavior(QuerySplittingBehavior.SplitQuery));
             }
         }
 
