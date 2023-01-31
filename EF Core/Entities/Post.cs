@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace EF_Core.Entities
+﻿namespace EF_Core.Entities
 {
     public partial class Post
     {
