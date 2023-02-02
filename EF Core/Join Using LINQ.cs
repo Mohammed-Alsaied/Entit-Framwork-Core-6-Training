@@ -21,7 +21,7 @@ namespace EF_Core
                                       AuthorName = a.Name
 
                                   }).ToList();
-            //}).Cpunt();
+            ////}).Cpunt();
 
             #endregion Inner join
 
