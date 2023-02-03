@@ -1,4 +1,5 @@
-﻿using EF_Core.Entities;
+﻿using EF_Core.Dtos;
+using EF_Core.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace EF_Core.DbContexts
@@ -19,6 +20,7 @@ namespace EF_Core.DbContexts
         public virtual DbSet<Nationality> Nationalities { get; set; } = null!;
         public virtual DbSet<Blog> Blogs { get; set; } = null!;
         public virtual DbSet<Book> Books { get; set; } = null!;
+        public virtual DbSet<BookDto> BookDto { get; set; } = null!;
         public virtual DbSet<Category> Categories { get; set; } = null!;
         public virtual DbSet<Employee> Employees { get; set; } = null!;
         public virtual DbSet<Post> Posts { get; set; } = null!;
@@ -84,7 +86,10 @@ namespace EF_Core.DbContexts
             });
 
             OnModelCreatingPartial(modelBuilder);
+
+            modelBuilder.Entity<BookDto>(e => { e.HasNoKey().ToView(null); });
         }
+
 
         partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
     }
